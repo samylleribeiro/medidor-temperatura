@@ -25,3 +25,29 @@ button {  margin: 5px;  padding: 10px 15px;  border: none;  border-radius: 8px; 
     width: 90%;
   }
 }
+/* Estilo para a moldura externa do termômetro */
+.moldura-termometro {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#termometro-corpo {
+    width: 25px;
+    height: 200px; /* Altura do termômetro */
+    background-color: #ddd; /* Cor de fundo (vazio) */
+    border-radius: 15px;
+    position: relative;
+    border: 3px solid #aaa;
+    overflow: hidden; /* Garante que o mercúrio não saia das bordas */
+}
+
+/* O "mercúrio" que vai preencher */
+#mercurio {
+    width: 100%;
+    height: 0%; /* Começa vazio */
+    background-color: green; /* Cor inicial (normal) */
+    position: absolute;
+    bottom: 0; /* Começa a preencher de baixo para cima */
+    transition: height 1s ease-in-out, background-color 0.5s ease; /* Animação suave */
+}
